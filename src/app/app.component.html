@@ -1,11 +1,22 @@
 <!--The whole content below can be removed with the new code.-->
 <div style="text-align:center">
-  <h1>
-    Welcome {{title}}!!
+  <h1 [ngClass] = "{'has-error' : true}" *ngFor = "let i of arr">
+  {{i.name}}
   </h1>
-
- <a routerLink="/member">Member</a>
- <a routerLink="/product">Product</a> 
+  <div [ngSwitch] = "2+2">
+    <app-product *ngSwitchCase="4"></app-product>
+    <app-members *ngSwitchCase = "3"></app-members>
+  </div>
+ <a *ngIf = "true" [routerLink]="['/member']">Member</a>
+ <a *ngIf = "true" [ngStyle] = "{'color': 'red'}" [routerLink]="['/product']">Product</a> 
 <br>
+
+<div *ngIf = "false; then fakeTemplate1 else fakeTemplate2 ">
+
+<ng-template #fakeTemplate1>Fake Template1</ng-template>
+<ng-template #fakeTemplate2>Fake Template2</ng-template>
+
+</div>
+
 <router-outlet></router-outlet>
 

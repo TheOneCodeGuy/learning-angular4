@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Rengu';
+  obj = {
+  	id: 1,
+  	name: "rengu"
+  };
+  arr = [
+  	{ id: 1, name: "rengu"},
+  	{ id: 4, name: "Raju"}
+  ];
+  styleObj = {
+  	"color" : "red"
+  }
 }
