@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import  { FormsModule } from '@angular/forms';
+import  { FormsModule } from '@angular/forms'; //template Driven
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import  { ReactiveFormsModule } from '@angular/forms'; //model driven
 
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { SortPipe } from 'app/app.sort'
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
     	{
     		path : 'model-driven-form',
@@ -34,7 +36,7 @@ import { SortPipe } from 'app/app.sort'
     	},
     	{
     		path : 'pipes',
-    		component : Prod 
+    		component : ProductComponent 
     	}
     ])
   ],

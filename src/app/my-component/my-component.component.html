@@ -1,2 +1,20 @@
+<form class="container"
+	[formGroup] = "form"
+	(ngSubmit) = "submit(form.value)">
+	<div class="form-group">
+		<label for="name">Name</label>
+		<input placeholder="Name" class="form-control" name="name" formControlName = "name">
+	</div>
+	<div class="form-group">
+		<label for="gender">Gender</label>
+		<br>
+		<input formControlName = "gender" type="radio" name="gender" value="male">Male
+		<br>
+		<input formControlName = "gender" type="radio" name="gender" value="female">Female
+	</div>
+	<div>
+		<input type="submit" value="submit" class="btn btn info">
+	</div>
+</form>
 <br>
 <a [routerLink]="['/']">Close</a>
