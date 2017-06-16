@@ -1,22 +1,14 @@
-<!--The whole content below can be removed with the new code.-->
-<div style="text-align:center">
-  <h1 [ngClass] = "{'has-error' : true}" *ngFor = "let i of arr">
-  {{i.name}}
-  </h1>
-  <div [ngSwitch] = "2+2">
-    <app-product *ngSwitchCase="4"></app-product>
-    <app-members *ngSwitchCase = "3"></app-members>
+<div class="main">
+    <h1>Item's List</h1>
+  <div class="addItem">
+    <input placeholder="Add Item" class="addText" [(ngModel)] = "newItem">
+    <button (click) = "pushItem()">Add</button>
   </div>
- <a *ngIf = "true" [routerLink]="['/member']">Member</a>
- <a *ngIf = "true" [ngStyle] = "{'color': 'red'}" [routerLink]="['/product']">Product</a> 
-<br>
-
-<div *ngIf = "false; then fakeTemplate1 else fakeTemplate2 ">
-
-<ng-template #fakeTemplate1>Fake Template1</ng-template>
-<ng-template #fakeTemplate2>Fake Template2</ng-template>
-
+  <ul>
+    <li *ngFor = "let i of items; let ind = index">
+      {{i}}
+      <span (click) = "removeItem(ind)">x</span>
+    </li>
+  </ul>
 </div>
-
-<router-outlet></router-outlet>
 
