@@ -1,3 +1,25 @@
-<p>
-  product works!
-</p>
+<h4>{{name | uppercase}}</h4>
+<h4>{{name | lowercase}}</h4>
+<h4>{{name | titlecase}}</h4>
+<h4>{{date | date:'medium'}}</h4>
+<h4>{{date | date:'longDate' | uppercase}}</h4>
+<h4>{{date | date:'shortDate'}}</h4>
+<h4>{{cost | currency:'INR':'true'}}</h4>
+<h4>{{cost | currency:'USD'}}</h4>
+<h4>{{cost | percent}}</h4>
+<h4>{{cost | number:'2.2-2'}}</h4>
+<ul>
+	<li *ngFor = "let num of arr | slice:3:6">
+		{{num}}
+	</li>
+</ul>
+<hr>
+<ul>
+	<li *ngFor = "let num of arr | slice:-3">
+		{{num}}
+	</li>
+</ul>
+<hr>
+{{names | sort : 'des':'u'}}
+<br>
+<a [routerLink]="['/']">Close</a>
