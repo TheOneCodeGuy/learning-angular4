@@ -25,14 +25,17 @@ import { SortPipe } from 'app/app.sort'
     HttpModule,
     RouterModule.forRoot([
     	{
-    		path : 'member',
+    		path : 'model-driven-form',
+    		component : MyComponentComponent 
+    	},
+    	{
+    		path : 'template-driven-form',
     		component : MembersComponent 
     	},
     	{
-    		path : 'product',
-    		component : ProductComponent 
-    	},
-
+    		path : 'pipes',
+    		component : Prod 
+    	}
     ])
   ],
   providers: [],

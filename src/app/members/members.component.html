@@ -1,3 +1,20 @@
-<p>
-  members works!
-</p>
+<form class="container"
+	#firstForm = "ngForm"
+	(ngSubmit) = "submit(firstForm.value)">
+	<div class="form-group">
+		<label for="name">Name</label>
+		<input placeholder="Name" class="form-control" name="name" ngModel>
+	</div>
+	<div class="form-group">
+		<label for="gender">Gender</label>
+		<br>
+		<input ngModel type="radio" name="gender" value="male">Male
+		<br>
+		<input ngModel type="radio" name="gender" value="female">Female
+	</div>
+	<div>
+		<input type="submit" value="submit" class="btn btn info">
+	</div>
+</form>
+<br>
+<a [routerLink]="['/']">Close</a>
