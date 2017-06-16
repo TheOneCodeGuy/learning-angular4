@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { ProductComponent } from './product/product.component';
 import { MembersComponent } from './members/members.component';
-import { SortPipe } from 'app/app.sort'
+import { SortPipe } from 'app/app.sort';
+import { ConvertComponent } from './convert/convert.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SortPipe } from 'app/app.sort'
     AppComponent,
     MyComponentComponent,
     ProductComponent,
-    MembersComponent
+    MembersComponent,
+    ConvertComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,11 @@ import { SortPipe } from 'app/app.sort'
     	{
     		path : 'pipes',
     		component : ProductComponent 
-    	}
+    	},
+      {
+        path : 'convert',
+        component : ConvertComponent
+      }
     ])
   ],
   providers: [],
