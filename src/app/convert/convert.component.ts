@@ -17,8 +17,11 @@ export class ConvertComponent{
 		});
 	}
 
+	b=0; o=0; h=0;
+	
 	decimalChanged = function(oldValue, newValue){
 		if(newValue != ""){
+			console.log("dec- b:" + this.b + " o:" + this.o + " h:" + this.h);
 			this.form.patchValue({binary: parseInt(newValue, 10).toString(2)});
 			this.form.patchValue({octal: parseInt(newValue, 10).toString(8)});
 			this.form.patchValue({hex: parseInt(newValue, 10).toString(16).toUpperCase()});
@@ -30,13 +33,12 @@ export class ConvertComponent{
 		}
 	}
 
-	b=0; o=0; h=0;
-
 	binaryChanged = function(oldValue, newValue){
 		this.b = this.b + 1;
 
 		if(this.b==1){
 			if(newValue != ""){
+				console.log("bin- b:" + this.b + " o:" + this.o + " h:" + this.h);
 				this.form.patchValue({decimal: parseInt(newValue, 2).toString(10)});
 			}
 			else{
@@ -52,6 +54,7 @@ export class ConvertComponent{
 
 		if(this.o==1){
 			if(newValue != ""){
+				console.log("oct- b:" + this.b + " o:" + this.o + " h:" + this.h);
 				this.form.patchValue({decimal: parseInt(newValue, 8).toString(10)});
 			}
 			else{
@@ -67,6 +70,7 @@ export class ConvertComponent{
 
 		if(this.h==1){
 			if(newValue != ""){
+				console.log("hex- b:" + this.b + " o:" + this.o + " h:" + this.h);
 				this.form.patchValue({decimal: parseInt(newValue, 16).toString(10)});
 			}
 			else{

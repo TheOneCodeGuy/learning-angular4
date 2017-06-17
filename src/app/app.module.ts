@@ -11,7 +11,8 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { ProductComponent } from './product/product.component';
 import { MembersComponent } from './members/members.component';
 import { SortPipe } from 'app/app.sort';
-import { ConvertComponent } from './convert/convert.component'
+import { ConvertComponent } from './convert/convert.component';
+import { ValidationComponent } from './validation/validation.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ConvertComponent } from './convert/convert.component'
     MyComponentComponent,
     ProductComponent,
     MembersComponent,
-    ConvertComponent
+    ConvertComponent,
+    ValidationComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,10 @@ import { ConvertComponent } from './convert/convert.component'
       {
         path : 'convert',
         component : ConvertComponent
+      },
+      {
+        path : 'validation',
+        component : ValidationComponent
       }
     ])
   ],
