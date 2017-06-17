@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyDataService } from 'app/my-data.service';
+import { MyDataService } from './../my-data.service';
 
 @Component({
   selector: 'app-service',
@@ -14,7 +14,8 @@ export class ServiceComponent implements OnInit {
   {}
 
   ngOnInit() {
-  	console.log(this.newService.obj);
+  	// console.log(this.newService.obj);
+  	this.newService.fetchData();
   }
 
 }
